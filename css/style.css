@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #130C30;
+    color: #E9E9E9;
+    font-family: 'Montserrat';
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+.icon-24 {
+    font-size: 24px !important;
+    color: white;
+}
+
+header {
+    display: flex;
+    margin: 2em 6em;
+}
+
+content {
+    margin: 1em 6em;
+}
+
+footer {
+    color: white;
+}
+
+.link {
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.link:hover {
+    color: #727272 !important;
+}
+
+.action-button {
+    width: 45px;
+    height: 45px;
+}
+
+#card{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 23em;
+    margin: 1em;
+    font-family: monospace;
+    background-color: black;
+}
+.card-header{
+    display: flex;
+    flex-flow: row;
+}
+.card-title{
+    font-size: 18px;
+}
+.card-subtitle{
+    font-size: 13px;
+}
+.card-btn{
+    align-items: flex-end;
+    text-decoration: underline;
+    margin-left: auto;
+}
+
+/* Loading screen with display hide in javascript after changes */
+
+#main{
+    display: none;
+}
+#spinner {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 999999;
+    background: #0b0814;
+    display: flex;
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+}
+
+.spinner {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: 100px auto;
+    vertical-align: middle;
+}
+
+.ball-1,
+.ball-2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #FFF;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.ball-2 {
+    animation-delay: -1s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: scale(0)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+}

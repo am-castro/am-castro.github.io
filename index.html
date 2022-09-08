@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfólio: Antonio Marcos Castro</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/img/programmer.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/fontawesome/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- Scripts -->
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/3a8ad5fab4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="./js/paginator.js"></script>
+    <script src="./js/actions.js"></script>
+    <script src="./js/api.js"></script>
+
+    <!-- Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="spinner">
+        <div class="spinner">
+            <div class="ball-1"></div>
+            <div class="ball-2"></div>
+        </div>
+    </div>
+    <header class="d-flex flex-wrap align-items-end justify-content-end justify-content-lg-end">
+        <button type="button" class="btn link rounded-circle action-button" id="theme" onclick="theme(this)">
+            <i class="fa-solid fa-sun icon-24"></i>
+        </button>
+        <button type="button" class="btn link rounded-circle action-button" id="volume" onclick="volume(this)">
+            <i class="fa-solid fa-volume-high icon-24"></i>
+        </button>
+        <button type="button" class="btn link rounded-circle action-button" id="lang" onclick="lang()">
+            <i class="fa-solid fa-earth-americas icon-24"></i>
+        </button>
+    </header>
+    <main id="main">
+        <div class="container col-xxl-8 px-4 py-5">
+            SITE EM PRODUÇÃO<BR>
+            WEBSITE IN PRODUCTION
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-8 col-sm-8 col-lg-5 fade-in-right">
+                    <img src="./img/homem.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="200" loading="lazy">
+                </div>
+                <div class="col-lg-7 fade-in-left">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Website and user interface programmer</h1>
+                    <p class="lead">Over pass 2 years, as an programmer and designer, i’ve worked
+                        in braziliam companies and up-and-coming startups to successfully
+                        help them reach their full potential and attract new customers.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn link"><b>View Projects</b></button>
+                        <span class="mt-1"> or </span>
+                        <button type="button" class="btn link"><b>Read About Me</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex row flex align-items-center">
+                <h1>Open Projects</h1>
+                <div id="card">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2022 <a href="https://www.linkedin.com/in/antoniomarcosc/" class="link">QG Tecnologia</a> by <a href="https://github.com/am-castro" class="link">Antonio Marcos</a></span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+                <a href="#">
+                    <i class="fa-solid fa-sun"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>
