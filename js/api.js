@@ -18,9 +18,12 @@ $(document).ready(
     }
 );
 function loading(){
+
+    document.getElementById("main").style.display = "block";
+    document.getElementById('main').click();
+    setTimeout(()=>{
         document.getElementById("spinner").style.display = "none";
-        document.getElementById("main").style.display = "block";
-        document.getElementById('main').click();
+    },1000)
         sound(4);
 }
 function formatDate(number){
