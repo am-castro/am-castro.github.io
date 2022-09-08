@@ -20,7 +20,7 @@ h1 {
 
 header {
     display: flex;
-    margin: 2em 6em;
+    margin: 2em 20em;
 }
 
 content {
@@ -29,6 +29,7 @@ content {
 
 footer {
     color: white;
+    margin: 2em 18em;
 }
 
 .link {
@@ -130,5 +131,17 @@ footer {
 
     50% {
         transform: scale(1)
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    header{
+        margin: 2em 1em;
+    }
+    footer{
+        font-size: 14px;
+        text-align: center;
+        margin: 2em 0;
     }
 }

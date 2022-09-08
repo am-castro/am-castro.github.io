@@ -23,8 +23,8 @@ function loading(){
     document.getElementById('main').click();
     setTimeout(()=>{
         document.getElementById("spinner").style.display = "none";
-    },1000)
         sound(4);
+    },1000)
 }
 function formatDate(number){
     if(number<10){
@@ -41,10 +41,10 @@ function changeRepos(repositories){
         document.getElementById('card').innerHTML += `<div class='card'>
             <div class='card-header'>
                 <div>
-                    <div class='card-title'>${ repositories[i].name } ${ repositories[i].visibility } </div>
+                    <div class='card-title'>${ repositories[i].name } </div>
                     <div class='card-subtitle'> Created at: ${ dateFormat }</div>
                 </div>
-                <div class='card-btn'>Go to page</div>
+                <a href='${repositories[i].html_url}' class='card-btn'>Go to page</a>
             </div>
         </div>`;
     }

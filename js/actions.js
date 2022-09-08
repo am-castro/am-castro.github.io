@@ -15,13 +15,13 @@ function volume(icon){
     changes.classList.toggle('fa-volume-high');
     changes.classList.toggle('fa-volume-low');
     let value = window.sessionStorage.getItem('am-castro.sounds');
+    console.log(window.sessionStorage.getItem('am-castro.sounds'))
     if(value==true){
-        value=false;
+        setValue=false;
     }else{
-        value=true;
+        setValue=true;
     }
-    window.sessionStorage.setItem('am-castro.sounds', value);
-    console.log(value)
+    window.sessionStorage.setItem('am-castro.sounds', setValue);
 }
 function lang(){
 
