@@ -81,6 +81,9 @@ footer {
     text-decoration: underline;
     margin-left: auto;
 }
+.card-image{
+    width: 23em;
+}
 /* End cards of projects */
 /* Loading screen with display hide in javascript after changes */
 

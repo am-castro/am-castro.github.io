@@ -62,7 +62,7 @@ function changeRepos(repositories){
                 <a href='${repositories[i].html_url}' class='card-btn'>Go to page</a>
             </div>
             <div class='card-content'>
-                <img src='${ getProjectImages( repositories[i].name ) }'
+                <img class='card-image' src='${ getProjectImages( repositories[i].name ) }'
             </div>
         </div>`;
     }
