@@ -31,7 +31,7 @@ function formatDate(number){
     }
 }
 function changeRepos(repositories){
-    for(let i=0; i<repositories.length; i++){
+    for(let i=repositories.length-1; i>=0; i--){
         createdDate = new Date(repositories[i].created_at);
         // modifiedDate = new Date(repositories[i].created_at);
         dateFormat = (formatDate(createdDate.getDate().toString()) + "/" + (formatDate(createdDate.getMonth()+1).toString()) + "/" + createdDate.getFullYear());
