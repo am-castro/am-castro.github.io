@@ -7,7 +7,7 @@ $(document).ready(
             dataType: 'text',
             success: function(returnjson) {
                 repositories = JSON.parse(returnjson);
-                changeRepos(repositories);
+                changeRepos(repositories.sort());
             },
             error: function() {
                 loading();
@@ -23,24 +23,6 @@ function loading(){
     },1000);
 }
 
-function getProjectImages(project){
-    var url = `https://api.github.com/repos/am-castro/${project}/contents/${project}_logo.png`;
-        jQuery.ajax({
-            url: url,
-            type: "GET",
-            dataType: 'text',
-            success: function(returnjson) {
-                logo = JSON.parse(returnjson);
-                console.log(logo);
-                return logo._links;
-            },
-            error: function() {
-                console.error('Não foi possível ver a imagem');
-                loading();
-                return;
-            }
-        });
-}
 function formatDate(number){
     if(number<10){
         return '0'+number;
@@ -62,7 +44,7 @@ function changeRepos(repositories){
                 <a href='${repositories[i].html_url}' class='card-btn'>Go to page</a>
             </div>
             <div class='card-content'>
-                <img class='card-image' src='${ getProjectImages( repositories[i].name ) }'
+                <img class='card-image' src='https://raw.githubusercontent.com/am-castro/${repositories[i].name}/master/${repositories[i].name}_logo.png'
             </div>
         </div>`;
     }

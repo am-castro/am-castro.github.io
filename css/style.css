@@ -83,6 +83,9 @@ footer {
 }
 .card-image{
     width: 23em;
+    margin: -1px;
+    padding: 0;
+    border-radius: 0 0 calc(0.375rem - 1px) calc(0.375rem - 1px);
 }
 /* End cards of projects */
 /* Loading screen with display hide in javascript after changes */
