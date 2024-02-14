@@ -14,19 +14,19 @@ Aqui estão alguns dos projetos que desenvolvi:
 
 Um sistema para controle de estoque, gerenciamento de ordens de serviço, emissão de notas fiscais entre outros.
 
-[Link para o portfólio](https://am-castro.github.io/#produtos)
+[Link para o portfólio](https://am-castro.github.io/#solucoes)
 
 ### Projeto 2: LEADs em páginas web
 
 Um projeto de análise de cliques mostrando onde, como e quando. Excelente para gerar leads, onde o projeto está com mais popularidade e em qual horário é mais acessado.
 
-[Link para o portfólio](https://am-castro.github.io/#produtos)
+[Link para o portfólio](https://am-castro.github.io/#solucoes)
 
 <!-- ### Projeto 3: LDAP Manager
 
 Um sistema para gerenciar atividades no LDAP sem a necessidade de acesso administrativo. Segurança e Auditoria é o principal foco.
 
-[Link para o portfólio](https://am-castro.github.io/#produtos) -->
+[Link para o portfólio](https://am-castro.github.io/#solucoes) -->
 
 ## Habilidades
 
