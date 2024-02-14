@@ -195,6 +195,7 @@ body{
     .cf-container{
         padding: 40px !important;
     }
+    .asset-green,
     .cf-toolbar .cf-toolbar__item{
         display: none !important;
     }
