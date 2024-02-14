@@ -1,0 +1,72 @@
+.showLeftToRight{
+    -webkit-animation: showLeftToRight 0.5s ease-in-out;
+    animation: showLeftToRight 0.5s ease-in-out;
+}
+.showRightToLeft{
+    -webkit-animation: showRightToLeft 0.5s ease-in-out;
+    animation: showRightToLeft 0.5s ease-in-out;
+}
+.hideRightToLeft{
+    -webkit-animation: hideRightToLeft 0.5s ease-in-out;
+    animation: hideRightToLeft 0.5s ease-in-out;
+}
+.floatInfinite{
+    -webkit-animation: floatInfinite 3s ease-in-out infinite;
+    animation: floatInfinite 3s ease-in-out infinite;
+}
+.cf-rotate{
+    -webkit-animation: cf-rotate 60s linear infinite;
+    animation: cf-rotate 60s linear infinite;
+}
+@keyframes cf-rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatInfinite {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideRightToLeft {
+    0%{
+        opacity: 1;
+        display: flex;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes showRightToLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showLeftToRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

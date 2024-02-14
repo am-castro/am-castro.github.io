@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./assets/css/cf.basics.css"/>
     <link rel="stylesheet" href="./assets/css/cf.animations.css"/>
     <link rel="stylesheet" href="./assets/css/cf.typography.css"/>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/cf.animations.js"></script>
 </head>
 <body>
     <header>
@@ -18,15 +20,14 @@
                 <span class="logo-color logo">Marcos Queiroz</span>
             </div>
             <div class="cf-toolbar__item">
-                <a class="cf-raised-button" href="#inicio">Início</a>
-                <a class="cf-raised-button" href="#solucoes">Soluções</a>
-                <a class="cf-raised-button" href="#servicos">Serviços</a>
-                <a class="cf-raised-button" href="#tecnologias">Tecnologias</a>
-                <a class="cf-raised-button" href="#sobre">Sobre</a>
-                <a class="cf-raised-button" href="#contato">Contato</a>
+                <a class="cf-raised-button">Home</a>
+                <a class="cf-raised-button">Solutions</a>
+                <a class="cf-raised-button">Services</a>
+                <a class="cf-raised-button">About</a>
+                <a class="cf-raised-button">Contact</a>
                 <div class="lang gap-2 flex">
-                    <img src="./assets/images/bandeiras/brasil.png" height="20">
-                    <img src="./assets/images/bandeiras/eua.png" height="20" onclick="translate()">
+                    <img src="../assets/images/bandeiras/brasil.png" height="20" onclick="translate('pt')">
+                    <img src="../assets/images/bandeiras/eua.png" height="20">
                 </div>
             </div>
             <a class="cf-raised-button showOnMobile" onclick="menu()">Menu</a>
@@ -35,42 +36,36 @@
                     <a>X</a>
                 </div>
                 <div onclick="menu()" class="cf-raised-button">
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio">Home</a>
                 </div>
                 <div onclick="menu()" class="cf-raised-button">
-                    <a href="#solucoes">Soluções</a>
+                    <a>Solutions</a>
                 </div>
                 <div onclick="menu()" class="cf-raised-button">
-                    <a href="#servicos">Serviços</a>
+                    <a href="#servicos">Services</a>
                 </div>
                 <div onclick="menu()" class="cf-raised-button">
-                    <a href="#tecnologias">Tecnologias</a>
+                    <a>About</a>
                 </div>
                 <div onclick="menu()" class="cf-raised-button">
-                    <a href="#sobre">Sobre</a>
-                </div>
-                <div onclick="menu()" class="cf-raised-button">
-                    <a href="contato">Contato</a>
+                    <a>Contact</a>
                 </div>
             </div>
         </div>
     </header>
     <main class="w-full">
-        <div class="cf-container w-full flex flex-nowrap justify-between" id="inicio">
-            <div class="textPrincipal w-full showLeftToRight">
-                <h1>Vamos trabalhar juntos?</h1>
-                <h5>Utilizamos tecnologias avançadas e seguras!</h5>
+        <div class="cf-container presentation" id="inicio">
+            <div class="cf-container__left showLeftToRight center" style="min-height: 400px;">
+                <h1>Let's work together?</h1>
                 <!-- <p>Security, velocity, support!</p> -->
             </div>
-            <div class="w-6/12 relative">
-                <img src="./assets/images/asset2.png" alt="Antonio Marcos" class="asset-green"/>
-                <img src="./assets/images/rounded-shape.svg" alt="Antonio Marcos" class="cf-rotate rotate-shape"/>
-                <img src="./assets/images/notebook.png" class="showRightToLeft floatInfinite" alt="Antonio Marcos"/>
+            <div class="cf-container__right">
+                <img src="./assets/img/antonio-marcos.jpg" alt="Antonio Marcos" class="cf-image"/>
             </div>
         </div>
-        <div class="cf-container flex-wrap" id="solucoes">
+        <div class="cf-container presentation flex-wrap" id="solucoes">
             <h4 class="showLeftToRight">
-                Soluções
+                Solutions
             </h4>
             <div class="cf-card-list between showRightToLeft">
                 <div class="cf-card w-32%">
@@ -82,7 +77,7 @@
                             <h5>Leads de Landing Pages</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Entenda quem está visitando sua página, de onde, como e quando!</p>
+                            <p>Analise de entradas na landing page: onde, como e quando!</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +90,7 @@
                             <h5>LDAP Manager</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Proteja e monitore seu Active Directory com segurança.</p>
+                            <p>Controle com segurança e auditoria!</p>
                         </div>
                     </div>
                 </div>
@@ -108,15 +103,15 @@
                             <h5>Controle de estoque</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Gerencie seu estoque, solicitações de serviço e ordens de serviço em um único sistema</p>
+                            <p>Sistema completo de controle de estoque, chamados e O.S.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cf-container flex-wrap" id="servicos">
+        <div class="cf-container presentation flex-wrap" id="servicos">
             <h4 class="showLeftToRight">
-                Serviços
+                Services
             </h4>
             <div class="cf-card-list between showRightToLeft">
                 <div class="cf-card w-32%">
@@ -125,10 +120,10 @@
                     </div>
                     <div class="cf-card__content">
                         <div class="cf-card__header">
-                            <h5>Web Pro</h5>
+                            <h5>Desenvolvimento web</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Sites impactantes para seu sucesso online</p>
+                            <p>Desenvolvimento de sites e sistemas web, com foco em segurança e performance.</p>
                         </div>
                     </div>
                 </div>
@@ -138,43 +133,30 @@
                     </div>
                     <div class="cf-card__content">
                         <div class="cf-card__header">
-                            <h5>App Boost</h5>
+                            <h5>Desenvolvimento mobile</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Aplicativos que elevam sua presença móvel</p>
+                            <p>Desenvolvimento de aplicativos mobile, com foco em segurança e performance.</p>
                         </div>
                     </div>
                 </div>
                 <div class="cf-card w-32%">
                     <div class="cf-card__image">
-                        <img src="./assets/images/desktop-development.jpg" alt="Desenvolvimento web"/>
+                        <img src="./assets/images/web-development.jpg" alt="Desenvolvimento web"/>
                     </div>
                     <div class="cf-card__content">
                         <div class="cf-card__header">
-                            <h5>Desktop Master</h5>
+                            <h5>Consultoria</h5>
                         </div>
                         <div class="cf-card__body">
-                            <p>Soluções robustas para sua estação de trabalho</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cf-card w-32%">
-                    <div class="cf-card__image">
-                        <img src="./assets/images/consult.jpg" alt="Desenvolvimento web"/>
-                    </div>
-                    <div class="cf-card__content">
-                        <div class="cf-card__header">
-                            <h5>Expertise Total</h5>
-                        </div>
-                        <div class="cf-card__body">
-                            <p>Guie seu negócio com nossos consultores</p>
+                            <p>Consultoria em segurança e performance para sites e sistemas web e mobile.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#000b76" fill-opacity="1" d="M0,160L120,154.7C240,149,480,139,720,144C960,149,1200,171,1320,181.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg> -->
-        <!-- <div class="cf-container">
+        <!-- <div class="cf-container presentation">
             <div class="cf-container__left">
                 <h1>Quem sou eu?</h1>
                 <p>Meu nome é Antonio Marcos, sou desenvolvedor web e mobile, com foco em segurança e performance.</p>
@@ -183,51 +165,11 @@
                 <img src="./assets/img/antonio-marcos.jpg" alt="Antonio Marcos" class="cf-image"/>
             </div>
         </div> -->
-        <div class="cf-container" id="tecnologias">
-            <h4 class="showLeftToRight">
-                Tecnologias
-            </h4>
-            <div class="w-full flex flex-wrap showLeftToRight">
-                <div class="w-full flex-row flex ml-30 containerLogos">
-                    <img src="./assets/images/logos/angular_v17.png" alt="Angular V17" onmouseenter="showText('angularText')" onmouseleave="showText('angularText')" class="logoTechnologies"/>
-                    <img src="./assets/images/logos/spring-boot.png" alt="Spring Boot" onmouseenter="showText('springText')" onmouseleave="showText('springText')" class="logoTechnologies"/>
-                    <img src="./assets/images/logos/python.png" alt="Python" onmouseenter="showText('pythonText')" onmouseleave="showText('pythonText')" class="logoTechnologies"/>
-                    <img src="./assets/images/logos/electron.svg" alt="Electron" onmouseenter="showText('electronText')" onmouseleave="showText('electronText')" class="logoTechnologies"/>
-                </div>
-
-                <div class="containerTextOfTechnologies">
-                    <div class="hide textOfTechnologies" id="angularText">
-                        <p>Angular é uma ferramenta que ajuda a construir a parte visual e interativa de sites e aplicativos.</p>
-                    </div>
-                    <div class="hide textOfTechnologies" id="springText">
-                        <p>O Spring Boot é uma ferramenta que facilita a criação da parte "funcional" de sites e aplicativos, tornando o desenvolvimento mais eficiente e rápido.</p>
-                    </div>
-                    <div class="hide textOfTechnologies" id="pythonText">
-                        <p>Utilizamos o Python para criar scripts de automações.</p>
-                    </div>
-                    <div class="hide textOfTechnologies" id="electronText">
-                        <p>O Electron é uma plataforma de desenvolvimento que permite criar aplicativos desktop.</p>
-                    </div>
-                </div>
-                <!-- <img src="./assets/images/pc.jpg" alt="Antonio Marcos" class="cf-image"/> -->
-                <!-- <div class="cf-container__right">
-                </div> -->
-            </div>
-        </div>
-        <div class="cf-container" id="sobre">
-            <h4 class="showLeftToRight">
-                Sobre
-            </h4>
-            <h6 class="showLeftToRight apresentationText">
-                Meu nome é Antonio Marcos Queiroz, sou desenvolvedor web, mobile e desktop.
-                Atualmente trabalho como desenvolvedor fullstack, criando toda a parte do front-end e back-end de sites e aplicativos, UX/UI.
-            </h6>
-        </div>
     </main>
     <footer>
         <div class="cf-container cf-footer">
             <h3 class="w-full around">
-                Marcos Queiroz
+                Antonio Marcos
             </h3>
             <div class="w-full center gap-2">
                 <a href="https://www.linkedin.com/in/antonio-marcos-queiroz-7b3b3b1a/" target="_blank">
@@ -242,11 +184,9 @@
                 </a>
             </div>
             <div class="w-full center">
-                <p>Desenvolvido por <a href="linkedin" class="underline">Marcos Queiroz</a></p>
+                <p>Desenvolvido por <a href="linkedin" class="underline">Antonio Marcos</a></p>
             </div>
         </div>
     </footer>
 </body>
-<script src="./assets/js/jquery.min.js"></script>
-<script src="./assets/js/cf.animations.js"></script>
 </html>

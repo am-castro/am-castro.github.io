@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(11, 6, 22);
+}
+.logo{
+    color: #ff4242;
+    font-size: 1.5rem;
+    align-items: center;
+    display: flex;
+}
+.logo-color{
+    color: white;
+}
+.text-on-card{
+    position: relative;
+}
+.text-on-card p{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.text-on-card p:hover{
+    opacity: 1;
+    transform: scale(1.02);
+}
+.w-400{
+    width: 400px;
+}
+.w-32\%{
+    width: 32%;
+}
+.gap-2{
+    gap: 20px;
+}
+.showOnMobile{
+    display: none;
+}
+.show{
+    display: flex !important;
+}
+.cf-toolbar__mobile .close{
+    background-color: #000000 !important;
+}
+@media screen and (max-width: 768px){
+    .cf-toolbar,
+    .cf-container{
+        padding: 40px !important;
+    }
+    .cf-toolbar .cf-toolbar__item{
+        display: none !important;
+    }
+    .showOnMobile{
+        display: flex;
+    }
+    .w-32\%{
+        width: 100%;
+    }
+}
+.underline{
+    text-decoration: underline;
+}
+.lang{
+    cursor: pointer;
+}
+.containerLogos{
+    height: 120px;
+}
+.logoTechnologies{
+    height: 100px;
+    width: auto;
+    padding: 5px;
+    border: 1px solid transparent;
+    transition: width, height, margin-top, cubic-bezier(0.25, 1, 0.25, 1) 0.3s;
+    /* margin-left: -70px; */
+}
+.textTechnologies{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.hide{
+    display: none;
+}
+.containerTextOfTechnologies{
+    position: relative;
+    width: 100%;
+    /* height: 200px; */
+    background-color: #090427;
+    border-radius: 12px;
+    border: 1px solid #403c53;
+    min-height: calc(40px + 8px + 14px);
+}
+.apresentationText{
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+    font-size: 1.2rem !important;
+    padding: 20px !important;
+    text-align: justify !important;
+}
+.textOfTechnologies{
+    /* position: absolute;
+    top: 20px;
+    left: 20px; */
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+.rotate-shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+.ml-30{
+    margin-left: 30px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.logoTechnologies:hover{
+    height: 130px;
+    margin-top: -30px;
+}
+
+.logoTechnologies:hover + .logoTechnologies{
+    height: 120px;
+    margin-top: -20px;
+}
+.logoTechnologies:hover + .logoTechnologies + .logoTechnologies{
+    height: 110px;
+    margin-top: -10px;
+}
+.logoTechnologies:has( + .logoTechnologies:hover) {
+    height: 110px;
+    margin-top: -10px;
+}
+.logoTechnologies:has( + .logoTechnologies + .logoTechnologies:hover) {
+    height: 105px;
+    margin-top: -5px;
+}
+
+
+.textPrincipal{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.asset-green{
+  width: 1500px;
+  aspect-ratio: 1000 / 1000;
+  height: 1500px;
+  top: 0;
+  right: -50%;
+  opacity: 0.9;
+  z-index: -2;
+  position: absolute;
+  pointer-events: none;
+  /* opacity: 0;
+  transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1), transform .6s cubic-bezier(0.16, 1, 0.3, 1); */
+  /* animation: 1s leftToRight; */
+}
