@@ -57,6 +57,9 @@ body{
 .cf-toolbar__mobile .close{
     background-color: #000000 !important;
 }
+.mr-2\%{
+    margin-right: 2%;
+}
 @media screen and (max-width: 768px){
     .cf-toolbar,
     .cf-container{
@@ -107,7 +110,7 @@ body{
 }
 .apresentationText{
     font-weight: 400 !important;
-    letter-spacing: 1px !important;
+    /* letter-spacing: 1px !important; */
     font-size: 1.2rem !important;
     padding: 20px !important;
     text-align: justify !important;
